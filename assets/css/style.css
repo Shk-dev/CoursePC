@@ -163,8 +163,7 @@ p{
 }
 
 .btn--coach{
-    padding-top: 30px;
-    padding-left: 22px;
+    padding: 50px 25px 50px 20px;
 }
 
 .log__button--coach:hover{
@@ -356,10 +355,6 @@ p{
     flex: 1;
 }
 
-.devices__box{
-    height: 499px;
-}
-
 .wedo__title{
     font-weight: 700;
     font-size: 48px;
@@ -369,7 +364,7 @@ p{
 .wedo__suptitle{
     line-height: 1.7;
 
-    margin-right: 24px;
+    padding-right: 24px;
 }
 
 
@@ -379,11 +374,11 @@ p{
 
 .pc__item{
     position: relative;
-    width: 446px;
-    height: 446px;
-    bottom: 403px;
+    bottom: 405px;
     left: 35px;
 }
+
+
 
 
 
@@ -508,7 +503,7 @@ p{
 .partners__item{
     flex: 1 1 0;
 
-    padding: 50px 20px 50px 50px;
+    padding: 30px 20px 20px 50px;
 }
 
 .partners__item.partners--line{
@@ -619,11 +614,6 @@ p{
 }
 
 /* coach */
-
-.section--coach{
-    height: 900px;
-}
-
 .coach{
     margin: 200px 0;
 }
@@ -666,7 +656,7 @@ p{
 .footer{
     max-width: 100%;
     width: 1300px;
-    height: 500px;
+    height: 600px;
 
     text-align: center;
 
@@ -741,6 +731,23 @@ p{
 }
 
 @media (max-width: 1220px){
+    
+    .coach{
+        margin: 50px 0;
+    }
+
+    .footer__suptitle{
+        padding: 50px 0;
+    }
+
+    .section.section--intro{
+        padding: 0 50px;
+    }
+
+    .section--partners{
+        height: 500px;
+    }
+
     .features__box{
         margin-left: 30px;
     }
@@ -750,10 +757,214 @@ p{
     }
     
     .border__line::after{
-        width: 195px;
+        width: 130px;
     }
 
     .border__line--second::after{
-        width: 450px;
+        width: 300px;
+    }
+
+    .partners__services{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .partners__item.partners--line{
+        border: 0;
+    }
+
+    .partners__services.partners--line{
+        border: 0;
+    }
+
+    .partners__item{
+        padding: 10px;
+    }
+
+    .dispn{
+        display: none;
+    }
+
+    .devices{
+        max-width: 325px;
+        height: 320px;
+    }
+
+    .pc__item--pc{
+        width: 260px;
+    }
+
+    .devices__box--bg{
+        width: 300px;
+    }
+    
+    .pc__item{
+        position: relative;
+        bottom: 240px;
+        left: 35px;
+    }
+
+    .wedo__title{
+        font-size: 36px;
+        line-height: 60px;
+    }
+
+    .section--flex{
+        margin-top: 100px;
+        margin-bottom: 50px;
+        max-height: 400px;
+    }
+
+    .section--education{
+        margin: 0;
+        margin-top: 25px;
+    }
+
+    .education__suptitle{
+        padding: 25px;
+    }
+
+    .education__lead{
+        font-size: 14px;
+    }
+    
+    .nav__link{
+        font-size: 12px;
+    }
+}
+/* Media for iPad and iPad Pro */
+@media (max-width: 860px){
+
+    .section--coach{
+        height: 1400px;
+    }
+
+    .section.section--intro{
+        padding: 0 30px;
+        margin-bottom: 125px;
+        margin-top: 78px;
+    }
+
+    .intro{
+        height: 555px;
+    }
+
+    .intro__title{
+        font-size: 36px;
+    }
+
+    .intro__item{
+        width: 80px;
+        height: 80px;
+        margin: 35px 20px 0 0;
+    }
+
+    .features{
+        padding: 0 10px;
+    }
+
+    .features__box{
+        margin-left: 10px;
+    }
+
+    .score__box{
+        margin-left: 10px;
+        margin-top: 5px;
+    }
+
+    .coach__row{
+        flex-direction: column;
+    }
+    .benefits__row{
+        flex-direction: column;
+        padding-top: 50px;
+    }
+    
+    .benefits__item{
+        padding-bottom: 50px;
+    }
+
+    .section--benefits{
+        height: 110vh;
+    }
+
+    .partners__title {
+        font-size: 36px;
+    }
+
+    .partners__row{
+        padding-top: 50px;
+    }
+
+    .section--partners{
+        height: 400px;
+        margin-top: 150px;
+    }
+    
+    .coach{
+        margin: 50px 0;
+    }
+
+    .coach__row{
+        padding-top: 75px;
+    }
+
+    .footer{
+        margin: 50px;
+        height: 500px;
+    }
+
+    .footer__suptitle{
+        padding: 50px;
+    }
+}
+
+/* Media for Smartphone */
+
+@media(max-width: 420px){
+
+    .section{
+        height: 1000px;
+    }
+
+    .block__start{
+
+    }
+
+    .block__title{
+        line-height: 1;
+    }
+
+    .section--flex{
+        flex-direction: column;
+        max-height: 820px;
+    }
+
+    .wedo__title{
+        font-size: 24px;
+    }
+
+    .intro__title{
+        font-size: 24px;
+    }
+
+    .block__title{
+        font-size: 24px;
+    }
+
+    .coach__title{
+        font-size: 24px;
+    }
+
+    .features__title{
+        font-size: 24px;
+    }
+
+    .partners__title{
+        font-size: 24px;
+    }
+
+    .education__title{
+        font-size: 24px;
     }
 }
