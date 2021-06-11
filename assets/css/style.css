@@ -40,9 +40,6 @@ p{
     flex-direction: column;
     align-items: center;
 
-    max-width: 100%;
-    height: 940px;
-
     background: url("../img/background.png") center no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
@@ -86,6 +83,7 @@ p{
 /* Header */
 
 .header{
+    padding: 0 30px;
     width: 100%;
 }
 
@@ -108,10 +106,14 @@ p{
 .nav__link{
     display: inline-block;
     vertical-align: top;
-    margin-left: 60px;
+    padding-left: 60px;
 
     color: #fff;
     text-decoration: none;
+}
+
+.nav__link:first-child{
+    padding-left: 0;
 }
 
 .nav__link:hover{
@@ -174,8 +176,6 @@ p{
 
 .log__button--footer{
     padding: 10px 30px;
-
-    width: 169px;
 
     background: linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%);
 
@@ -327,23 +327,22 @@ p{
 .section{
     max-width: 100%;
     width: 1300px;
-    height: 600px;
-
 }
 
 .section--flex{
-    margin: 200px 0;
+    margin: 150px 0;
 
     display: flex;
 }
 
 .section.section--intro{
-    margin-top: 202px;
+    margin: 210px 0;
 }
 
 
 .devices{
     flex: 1;
+    height: 600px;
 }
 
 
@@ -400,8 +399,6 @@ p{
 }
 
 .block__suptitle{
-    width: 408px;
-    
     color: #FFFFFF;
     opacity: 0.5;
 }
@@ -421,7 +418,6 @@ p{
     display: flex;
 
     color: #fff;
-    opacity: 0.5;
 }
 
 .block__text{
@@ -430,8 +426,18 @@ p{
 
     font-size: 14px;
     line-height: 22px;
+
+    opacity: 0.5;
 }
 
+.block__text:last-child{
+    padding-right: 0;
+}
+
+
+.p--active{
+    display: none;
+}
 
 
 
@@ -449,7 +455,7 @@ p{
 .benefits__row{
     display: flex;
 
-    padding-top: 130px;
+    padding-top: 100px;
 }
 
 .benefits__item{
@@ -457,14 +463,15 @@ p{
 }
 
 .benefits__suptitle{
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 500;
 
-    padding: 50px 0;
+    padding: 25px 0;
 }
 
 .benefits__text{
     line-height: 26px;
+    font-size: 14px;
 
     color: #fff;
     opacity: 0.8;
@@ -518,8 +525,7 @@ p{
 /* education */
 
 .section--education{
-    margin: 300px 0 150px 0;
-    height: 910px;
+    margin: 150px 0 150px 0;
 }
 
 .education__header{
@@ -614,9 +620,6 @@ p{
 }
 
 /* coach */
-.coach{
-    margin: 200px 0;
-}
 
 .coach__header{
     display: flex;
@@ -656,11 +659,11 @@ p{
 .footer{
     max-width: 100%;
     width: 1300px;
-    height: 600px;
 
     text-align: center;
 
-    margin-top: 250px;
+    margin-top: 150px;
+    margin-bottom: 50px;
 }
 
 .footer__title{
@@ -696,16 +699,20 @@ p{
 .vk, .youtube, .facebook, .instagram{
     margin-right: 30px;
     
-    width: 75px;
-    height: 75px;
+    width: 50px;
+    height: 50px;
 
     border-radius: 50px;
 
     background: linear-gradient(94.26deg, #C89AFC 9.51%, #7C6AFA 90.23%);
 }
 
+.instagram{
+    margin-right: 0;
+}
+
 .fab{
-    padding-top: 15px;
+    padding-top: 10px;
 }
 
 .footer__text{
@@ -728,9 +735,14 @@ p{
     .features{
         padding: 0 35px;
     }
-}
 
-@media (max-width: 1220px){
+    .log__button {
+        padding: 2px 30px;
+        width: 120px;
+        background: linear-gradient(
+    94.26deg, #C89AFC 9.51%, #7C6AFA 90.23%);
+        border-radius: 50px;
+    }
     
     .coach{
         margin: 50px 0;
@@ -744,16 +756,12 @@ p{
         padding: 0 50px;
     }
 
-    .section--partners{
-        height: 500px;
-    }
-
     .features__box{
-        margin-left: 30px;
+        margin-left: 100px;
     }
 
     .score__box{
-        margin-left: 30px;
+        margin-left: 100px;
     }
     
     .border__line::after{
@@ -810,14 +818,13 @@ p{
     }
 
     .section--flex{
-        margin-top: 100px;
-        margin-bottom: 50px;
-        max-height: 400px;
+        margin-top: 120px;
+        margin-bottom: 100px;
+
     }
 
     .section--education{
         margin: 0;
-        margin-top: 25px;
     }
 
     .education__suptitle{
@@ -830,14 +837,25 @@ p{
     
     .nav__link{
         font-size: 12px;
+        padding-left: 25px;
+    }
+
+    .nav__link:first-child{
+        padding-left: 25px;
+    }
+}
+
+@media(max-width: 955px){
+    .features__box{
+        margin-left: 50px;
+    }
+
+    .score__box{
+        margin-left: 50px;
     }
 }
 /* Media for iPad and iPad Pro */
 @media (max-width: 860px){
-
-    .section--coach{
-        height: 1400px;
-    }
 
     .section.section--intro{
         padding: 0 30px;
@@ -885,7 +903,7 @@ p{
     }
 
     .section--benefits{
-        height: 110vh;
+        margin-top: 5em;
     }
 
     .partners__title {
@@ -897,8 +915,7 @@ p{
     }
 
     .section--partners{
-        height: 400px;
-        margin-top: 150px;
+        margin-top: 80px;
     }
     
     .coach{
@@ -919,16 +936,58 @@ p{
     }
 }
 
+@media(max-width: 750px){
+
+    .features {
+        height: 325px;
+        margin: -70px 0;
+    }
+
+    .features__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section--flex {
+        flex-direction: column;
+    }
+
+    .devices {
+        max-height: 340px;
+    }
+
+    .coach__title{
+        padding-left: 10px;
+    }
+
+    .footer__btn{
+        padding-left: 0;
+    }
+
+    .log__button--footer{
+        right: 0;
+        left: -120px;
+        top: 1px;
+    }
+
+    .partners__item{
+        padding-left: 0px;
+    }
+
+}
+
 /* Media for Smartphone */
 
 @media(max-width: 420px){
 
-    .section{
-        height: 1000px;
+    .benefits__item:last-child{
+        padding-bottom: 0;
     }
-
-    .block__start{
-
+    
+    .block__start--header{
+        align-items: center;
+        padding-bottom: 50px;
     }
 
     .block__title{
@@ -937,7 +996,9 @@ p{
 
     .section--flex{
         flex-direction: column;
-        max-height: 820px;
+        height: 820px;
+        margin-top: 400px;
+        margin-bottom: 50px;
     }
 
     .wedo__title{
@@ -946,6 +1007,11 @@ p{
 
     .intro__title{
         font-size: 24px;
+    }
+
+    .intro__item{
+        width: 90px;
+        height: 80px;
     }
 
     .block__title{
@@ -957,14 +1023,149 @@ p{
     }
 
     .features__title{
-        font-size: 24px;
+        font-size: 18px;
     }
 
     .partners__title{
         font-size: 24px;
+        padding-left: 5px;
+    }
+    
+    .partners__item{
+        padding-left: 50px;
     }
 
     .education__title{
         font-size: 24px;
+    }
+
+    .p--active{
+        display: inherit;
+
+        padding-top: 20px;
+
+    }
+
+    .block__txt{
+        padding-top: 25px;
+        flex-direction: column;
+    }
+
+    .block__text{
+        padding: 0;
+    }
+
+    .features{
+        height: 325px;
+        margin: -70px 0;
+    }
+
+    .btn--features{
+        padding-top: 25px;
+    }
+
+    .features__container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .features__box{
+        margin-left: 0;
+    }
+    
+    .score__box{
+        margin-left: 0;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+    
+    .section--education{
+        margin-top: 50px;
+    }
+    
+    .section--coach{
+        margin-top: 50px;
+    }
+
+    .footer__input{
+        width: 250px;
+    }
+
+    .footer__btn{
+        padding-left: 0;
+    }
+
+    .log__button--footer{
+        padding: 11px 10px;
+        left: 70px;
+        top: -30px;
+    }
+
+    .footer__title{
+        font-size: 24px;
+    }
+
+    .fab{
+        padding-top: 7px;
+    }
+
+    .vk, .youtube, .facebook, .instagram{
+        height: 45px;
+        width: 45px;
+    }
+}
+
+/* Adaptive For iPhone 5/SE */
+
+@media(max-width: 320px) {
+    .border__line--second::after{
+        width: 275px;
+    }
+
+    .devices__box--bg{
+        width: 270px;
+    }
+
+    .main{
+        padding: 0 15px;
+    }
+
+    .line--left{
+        border-left: 25px solid rgb(68, 68, 68);
+    }
+
+    .line--right{
+        border-right: 25px solid rgb(68, 68, 68);
+    }
+
+    .partners__item {
+        padding-left: 35px;
+    }
+
+    .pc__item{
+        left: 15px;
+    }
+
+    .coach__title{
+        padding-left: 10px;
+    }
+    
+    .footer__text{
+        margin-bottom: 15px;
+    }
+
+    .nav{
+        display: none;
+    }
+
+    .footer__input {
+        margin-left: 0px;
+    }
+
+    .log__button--footer {
+        padding: 11px 10px;
+        left: 70px;
+        top: -30px;
     }
 }
